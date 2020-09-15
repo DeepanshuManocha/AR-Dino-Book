@@ -695,7 +695,7 @@ MonoBehaviour:
         m_MethodName: SetPrefab
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7710906018652871468, guid: 123e05fb8b1062f44a9849e2058e136c,
+          m_ObjectArgument: {fileID: 6674161763482555388, guid: e77e2519739b9714296f9f420619c33a,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
@@ -1203,7 +1203,7 @@ MonoBehaviour:
         m_MethodName: SetPrefab
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 3896197307331693373, guid: 5eba065da3ec59748af0661b395f9e94,
+          m_ObjectArgument: {fileID: 7585252858126353969, guid: 4bde87b1ac527244a95ea294bee769de,
             type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0

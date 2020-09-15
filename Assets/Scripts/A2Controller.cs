@@ -8,12 +8,14 @@ public class A2Controller : MonoBehaviour
     public Transform gameCamera;
     private Transform currentObject;
     public Retcile retcile;
-    public GameObject sphere, tile;
+    public GameObject sphere, prefab;
+    private int count;
+    private GameObject spwanedObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        count = 0;
         retcile.duration=5f;
     }
 
@@ -34,11 +36,19 @@ public class A2Controller : MonoBehaviour
             else
             {
                 if(retcile.value>=1)
-                {
-                    var sphereObject = Instantiate(sphere, transform);
-                    sphereObject.transform.position = currentObject.transform.position + Vector3.up;
-                    sphereObject.transform.parent = currentObject.transform.parent;
-                    retcile.value=0;
+                {   
+                    if(hitInfo.transform.CompareTag("Trex"))
+                    {
+                        Debug.Log("_____________Trex Working_________");
+                        retcile.value = 0;
+
+                    }
+                    else if (hitInfo.transform.CompareTag("Velociraptor"))
+                    {
+                        Debug.Log("_____________Velociraptor Working_________");
+                        retcile.value = 0;
+                    }
+                    
                 }
             }
         }
@@ -63,10 +73,18 @@ public class A2Controller : MonoBehaviour
                     if((hit.Trackable is DetectedPlane) && Vector3.Dot(Camera.main.transform.position-hit.Pose.position, hit.Pose.rotation*Vector3.up)>0)
                     {
                         DetectedPlane plane = hit.Trackable as DetectedPlane;
-                        var tileObject = Instantiate(tile, hit.Pose.position, hit.Pose.rotation);
-                        tileObject.transform.localScale = new Vector3(plane.ExtentX/2, 0.05f, plane.ExtentZ/2);
+                        if(count<1)
+                        {
+                            spwanedObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
+                            count++;
+                        }
+                        else
+                        {
+                            spwanedObject.transform.position = hit.Pose.position;
+                        }
+
                         var anchor = plane.CreateAnchor(hit.Pose);
-                        tileObject.transform.parent = anchor.transform;
+                        spwanedObject.transform.parent = anchor.transform;
                     }
                 }
             }       
