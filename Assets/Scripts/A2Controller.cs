@@ -11,6 +11,7 @@ public class A2Controller : MonoBehaviour
     public GameObject sphere, prefab;
     private int count;
     private GameObject spwanedObject;
+    public List<Animator> animators = new List<Animator>();
 
     // Start is called before the first frame update
     void Start()
@@ -36,19 +37,22 @@ public class A2Controller : MonoBehaviour
             else
             {
                 if(retcile.value>=1)
-                {   
-                    if(hitInfo.transform.CompareTag("Trex"))
+                {
+                    foreach (Animator animators in animators)
                     {
-                        Debug.Log("_____________Trex Working_________");
-                        retcile.value = 0;
-
+                        if (animators.CompareTag("Trex") && hitInfo.transform.CompareTag("Trex"))
+                        {
+                            Debug.Log("_____________Trex Working_________");
+                            //animators.SetBool("TRex",true);
+                            retcile.value = 0;
+                        }
+                        else if (animators.CompareTag("Velociraptor") && hitInfo.transform.CompareTag("Velociraptor"))
+                        {
+                            Debug.Log("_____________Velociraptor Working_________");
+                            animators.SetBool("Velociraptor", true);
+                            retcile.value = 0;
+                        }
                     }
-                    else if (hitInfo.transform.CompareTag("Velociraptor"))
-                    {
-                        Debug.Log("_____________Velociraptor Working_________");
-                        retcile.value = 0;
-                    }
-                    
                 }
             }
         }
