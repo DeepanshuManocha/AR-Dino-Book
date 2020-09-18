@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using GoogleARCore;
 
-public class A2Controller : MonoBehaviour
+public class ARController : MonoBehaviour
 {
     public Transform gameCamera;
     private Transform currentObject;
     public Retcile retcile;
-    public GameObject sphere, prefab;
+    public GameObject prefab;
     private int count;
     private GameObject spwanedObject;
     public List<Animator> animators = new List<Animator>();

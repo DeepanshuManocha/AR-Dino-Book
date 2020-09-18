@@ -599,7 +599,6 @@ GameObject:
   m_Component:
   - component: {fileID: 525005332}
   - component: {fileID: 525005334}
-  - component: {fileID: 525005335}
   - component: {fileID: 525005333}
   m_Layer: 0
   m_Name: Controller
@@ -636,7 +635,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameCamera: {fileID: 1561801760}
   retcile: {fileID: 992714141}
-  sphere: {fileID: 0}
   prefab: {fileID: 7671378407008124395, guid: c820626c534abd643bab2a455c78dce0, type: 3}
   animators:
   - {fileID: 191694185361198115, guid: 4bde87b1ac527244a95ea294bee769de, type: 3}
@@ -654,21 +652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefab: {fileID: 7671378407008124395, guid: c820626c534abd643bab2a455c78dce0, type: 3}
---- !u!114 &525005335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 525005331}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6fe17bed5cc798469b18c6fde3a2459, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 7671378407008124395, guid: c820626c534abd643bab2a455c78dce0, type: 3}
-  firstPersonCam: {fileID: 1561801760}
-  noOfPlanes: {fileID: 791350637}
 --- !u!1 &791350635
 GameObject:
   m_ObjectHideFlags: 0
