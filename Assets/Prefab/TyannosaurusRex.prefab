@@ -216,36 +216,6 @@ Transform:
   m_Father: {fileID: 2551118101370103702}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2551118101370141614
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2551118101370103694}
-  m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2551118101370103694
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2551118101370141614}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2551118101370103724}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2551118101370141616
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2551118101370103724}
   - component: {fileID: 6581240753818217913}
+  - component: {fileID: 480771949984810126}
   m_Layer: 0
   m_Name: TyannosaurusRex
   m_TagString: Trex
@@ -525,7 +496,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.23441857, y: 0.23441857, z: 0.23441857}
   m_Children:
-  - {fileID: 2551118101370103694}
   - {fileID: 2551118101370103738}
   - {fileID: 2551118101370103726}
   m_Father: {fileID: 0}
@@ -550,6 +520,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &480771949984810126
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551118101370141644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1576643, y: 4.3259344, z: 4.1124673}
+  m_Center: {x: -0.13956183, y: 2.051451, z: 1.556234}
 --- !u!1 &2551118101370141646
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,7 +563,7 @@ Transform:
   m_Children:
   - {fileID: 2551118101370103700}
   m_Father: {fileID: 2551118101370103724}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &2551118101381707452
 SkinnedMeshRenderer:
@@ -837,7 +820,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2551118101370103724}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2551118101370141660
 GameObject:

@@ -33,25 +33,25 @@ public class ARController : MonoBehaviour
                 currentObject = hitInfo.transform;
                 retcile.value = 0;
                 retcile.SetActive(true);
+
             }
             else
             {
                 if(retcile.value>=1)
                 {
-                    foreach (Animator animators in animators)
+                    if (hitInfo.transform.CompareTag("Trex"))
                     {
-                        if (animators.CompareTag("Trex") && hitInfo.transform.CompareTag("Trex"))
-                        {
-                            Debug.Log("_____________Trex Working_________");
-                            //animators.SetBool("TRex",true);
-                            retcile.value = 0;
-                        }
-                        else if (animators.CompareTag("Velociraptor") && hitInfo.transform.CompareTag("Velociraptor"))
-                        {
-                            Debug.Log("_____________Velociraptor Working_________");
-                            animators.SetBool("Velociraptor", true);
-                            retcile.value = 0;
-                        }
+                        hitInfo.collider.GetComponent<Animator>().SetBool("TRex",true);
+                        Debug.Log("_____________Trex Working_________");
+                        retcile.value = 0;
+                            
+                    }
+                    if (hitInfo.transform.CompareTag("Velociraptor"))
+                    {
+                        hitInfo.collider.GetComponent<Animator>().SetBool("Velociraptor", true);
+                        Debug.Log("_____________Velociraptor Working_________");
+                        retcile.value = 0;
+                           
                     }
                 }
             }
