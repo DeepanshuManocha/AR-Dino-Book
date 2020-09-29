@@ -11,7 +11,6 @@ public class ARController : MonoBehaviour
     public GameObject prefab;
     private int count;
     private GameObject spwanedObject;
-    public List<Animator> animators = new List<Animator>();
 
     // Start is called before the first frame update
     void Start()
@@ -33,7 +32,6 @@ public class ARController : MonoBehaviour
                 currentObject = hitInfo.transform;
                 retcile.value = 0;
                 retcile.SetActive(true);
-
             }
             else
             {
@@ -42,16 +40,18 @@ public class ARController : MonoBehaviour
                     if (hitInfo.transform.CompareTag("Trex"))
                     {
                         hitInfo.collider.GetComponent<Animator>().SetBool("TRex",true);
-                        Debug.Log("_____________Trex Working_________");
-                        retcile.value = 0;
-                            
+                        retcile.value = 0;    
+                        
                     }
                     if (hitInfo.transform.CompareTag("Velociraptor"))
                     {
                         hitInfo.collider.GetComponent<Animator>().SetBool("Velociraptor", true);
-                        Debug.Log("_____________Velociraptor Working_________");
                         retcile.value = 0;
-                           
+                        if (hitInfo.collider.GetComponent<Animator>().GetBool("Velociraptor"))
+                        {
+                            hitInfo.collider.GetComponent<Animator>().SetBool("Velociraptor", false);
+                        }
+
                     }
                 }
             }
@@ -60,7 +60,7 @@ public class ARController : MonoBehaviour
         {
             retcile.SetActive(false);
             currentObject=null;
-        
+
             if (Session.Status != SessionStatus.Tracking)
             {
                 return;

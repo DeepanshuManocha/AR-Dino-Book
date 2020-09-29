@@ -528,7 +528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &454776433
 AudioListener:
   m_ObjectHideFlags: 0
@@ -650,12 +650,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee80731c2e781d74abe07877c1c77c55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameCamera: {fileID: 454776435}
+  gameCamera: {fileID: 1561801760}
   retcile: {fileID: 992714141}
   prefab: {fileID: 7671378407008124395, guid: c820626c534abd643bab2a455c78dce0, type: 3}
-  animators:
-  - {fileID: 191694185361198115, guid: 4bde87b1ac527244a95ea294bee769de, type: 3}
-  - {fileID: 6581240753818217913, guid: b50117a6051dcaf40bfd060632928907, type: 3}
 --- !u!114 &525005334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1636178496
 MonoBehaviour:
   m_ObjectHideFlags: 0

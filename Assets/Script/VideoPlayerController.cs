@@ -5,15 +5,13 @@ using UnityEngine.Video;
 
 public class VideoPlayerController : MonoBehaviour
 {
-    bool ISPlaying, isStarted, isEnded;
+    bool ISPlaying;
     public GameObject playImg, pauseImg;
     public VideoPlayer videoPlayer;
 
     private void Start()
     {
         ISPlaying = false;
-        isStarted = false;
-        isEnded = false;
     }
 
     private void Update()
