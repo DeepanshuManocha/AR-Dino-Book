@@ -48,8 +48,8 @@ public class ARController : MonoBehaviour
                     if (hitInfo.transform.CompareTag("Trex"))
                     {
                         hitInfo.collider.GetComponent<Animator>().SetBool("TRex",true);
-                        StartCoroutine(AnimationOver(1.4f, hitInfo.collider.GetComponent<Animator>(), "TRex"));
                         retcile.value = 0;    
+                        StartCoroutine(AnimationOver(1.5f, hitInfo.collider.GetComponent<Animator>(), "TRex"));
                         
                     }
                     if (hitInfo.transform.CompareTag("Velociraptor"))
