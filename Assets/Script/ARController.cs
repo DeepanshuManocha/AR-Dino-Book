@@ -19,6 +19,14 @@ public class ARController : MonoBehaviour
         retcile.duration=5f;
     }
 
+    IEnumerator AnimationOver(float delayTime, Animator animator, string anim)
+    {
+        Debug.Log("before" + delayTime + " sec");
+        yield return new WaitForSeconds(delayTime);
+        animator.SetBool(anim, false);
+        Debug.Log("after" + delayTime+ " sec");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,6 +48,7 @@ public class ARController : MonoBehaviour
                     if (hitInfo.transform.CompareTag("Trex"))
                     {
                         hitInfo.collider.GetComponent<Animator>().SetBool("TRex",true);
+                        StartCoroutine(AnimationOver(1.4f, hitInfo.collider.GetComponent<Animator>(), "TRex"));
                         retcile.value = 0;    
                         
                     }
@@ -47,10 +56,7 @@ public class ARController : MonoBehaviour
                     {
                         hitInfo.collider.GetComponent<Animator>().SetBool("Velociraptor", true);
                         retcile.value = 0;
-                        if (hitInfo.collider.GetComponent<Animator>().GetBool("Velociraptor"))
-                        {
-                            hitInfo.collider.GetComponent<Animator>().SetBool("Velociraptor", false);
-                        }
+                        StartCoroutine(AnimationOver(3.4f, hitInfo.collider.GetComponent<Animator>(), "Velociraptor"));
 
                     }
                 }
