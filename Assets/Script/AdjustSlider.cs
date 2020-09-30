@@ -17,11 +17,11 @@ public class AdjustSlider : MonoBehaviour
         this.previousValue = this.slider.value;
     }
 
-    void OnSliderChanged(float value)
+    public void OnSliderChanged(float value)
     {
         float delta = value - this.previousValue;
-        //this.objectToRotate.transform.Rotate(Vector3.down * delta * 360);
-        this.objectToRotate.transform.Rotate(new Vector3(0 , -delta*360, 0));
+        this.objectToRotate.transform.Rotate(Vector3.down * delta * 360);
+        //this.objectToRotate.transform.Rotate(new Vector3(0 , -delta*360, 0));
         this.previousValue = value;
     }
 }

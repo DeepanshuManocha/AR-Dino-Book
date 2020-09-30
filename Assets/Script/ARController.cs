@@ -88,11 +88,10 @@ public class ARController : MonoBehaviour
                             spwanedObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
                             count++;
                         }
-                        else
+                        /*else
                         {
                             spwanedObject.transform.position = hit.Pose.position;
-                        }
-
+                        }*/
                         var anchor = plane.CreateAnchor(hit.Pose);
                         spwanedObject.transform.parent = anchor.transform;
                     }
