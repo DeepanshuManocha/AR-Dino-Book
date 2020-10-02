@@ -8,7 +8,7 @@ public class ARController : MonoBehaviour
     public Transform gameCamera;
     private Transform currentObject;
     public Retcile retcile;
-    public GameObject prefab;
+    public GameObject prefab, handAnim;
     private int count;
     private GameObject spwanedObject;
 
@@ -87,6 +87,7 @@ public class ARController : MonoBehaviour
                         {
                             spwanedObject = Instantiate(prefab, hit.Pose.position, hit.Pose.rotation);
                             count++;
+                            handAnim.SetActive(false);
                         }
                         /*else
                         {
