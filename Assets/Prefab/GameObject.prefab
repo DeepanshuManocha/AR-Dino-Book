@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 757582309852927935}
   m_Layer: 0
   m_Name: book_
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864f7ad3046f78b4d98b0af228b28f54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectToRotate: {fileID: 4708529064872515788}
+  objectToRotate: {fileID: 7671378407008124395}
   slider: {fileID: 123406588}
 --- !u!1 &5852441808569775394
 GameObject:
@@ -1345,7 +1345,7 @@ GameObject:
   - component: {fileID: 2359445642042142333}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

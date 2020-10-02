@@ -19,6 +19,7 @@ public class SelectPrefab : MonoBehaviour
                 spawnedObject = Instantiate(selectedObject) as GameObject;
                 spawnedObject.transform.parent = g.transform;
                 spawnedObject.transform.position = g.transform.position + Vector3.up*0.7f;
+                spawnedObject.transform.rotation = g.transform.rotation;
             }
         }
     }
